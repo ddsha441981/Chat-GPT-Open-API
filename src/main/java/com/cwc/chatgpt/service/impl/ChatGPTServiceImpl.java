@@ -13,7 +13,7 @@ import com.theokanning.openai.service.OpenAiService;
 @Service
 public class ChatGPTServiceImpl implements ChatGPTService {
 
-	private static final String API_KEY = "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";
+	private static final String API_KEY = "";
 	private static final Duration DEFAULT_TIMEOUT = Duration.ofSeconds(50);
 
 	@Override
