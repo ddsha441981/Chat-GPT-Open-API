@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat GPT</title>
+<link rel="stylesheet" href="" th:href="@{css/style.css}">
+
+</head>
+<body>
+	<div class="chat-container">
+		<div class="chat-header">ChatGPT</div>
+		<div class="chat-body" id="chatLog">
+			
+			<!-- Chat messages will be dynamically added here -->
+		</div>
+		<!-- Chat Request -->
+		<div class="chat-input">
+			<input type="hidden" id="user" name="user" value="user"> <input
+				type="text" id="userMessage" th:value="${userMessage}"
+				placeholder="Type your message...">
+
+			<button type="button" th:onclick="sendMessage()">Send</button>
+		</div>
+	</div>
+
+	<script src="" th:src="@{js/style.js}" type="text/javascript"></script>
+</body>
+</html>

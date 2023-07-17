@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>CHAT GPT</title>
-<link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat GPT</title>
+    <link rel="stylesheet" href="" th:href="@{css/myapp.css}">
+      
+    
 </head>
-
 <body>
-	<h1>Hello CHAT GPT</h1>
-
-	<form action="#" th:action="@{/chatprompt}" th:object="${prompts}"
-		method="POST">
-
-		<!-- Add hidden form field to handle update -->
-		<input type="text"
-			th:field="*{prompt}" class="form-control mb-4 col-4"> 
-
-		<button type="submit" class="btn btn-info col-2">Request</button>
-	</form>
-
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat GPT</h1>
+        </div>
+        <!-- Chat Response -->
+        <div class="chat-messages" id="chatLog">
+            <!-- Chat messages will be added here dynamically -->
+            
+        </div>
+        <!-- Chat Request -->
+        <div class="chat-input">
+        	<input type="hidden" id="user" name="user" value="user">
+            <input type="text" id="userMessage" th:value="${userMessage}" placeholder="Type your message...">
+            
+            <button type="button" th:onclick="sendMessage()">Send</button>
+           
+       		
+        </div>
+        <!-- <p th:text=${mykey}></p>
+        <script th:inline="javascript" >
+        
+		/*<![CDATA{*/
+			
+		/*}]*/
+	</script> -->
+    </div>
+	
+    <script src="" th:src="@{js/myapp.js}" type="text/javascript"></script>
 </body>
-
 </html>
